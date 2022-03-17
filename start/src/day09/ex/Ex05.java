@@ -22,7 +22,7 @@ public class Ex05 {
 		//석차 구하고
 		for(int i = 0 ; i < stud.length ; i++ ) {
 			int[] no = stud[i];
-			setRank(no);
+			
 		}
 	}
 	

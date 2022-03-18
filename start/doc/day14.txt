@@ -214,7 +214,7 @@ n1 == n2  (x)  :  주소 비교
 					
 					int num = no1; // 자동 UnBoxxing  
 					
-					매개변수 object에 10을 담는 경우엔 Integer 타입으로 박싱해줘야 한다.
+					매개변수 object o에 10을 담는 경우엔 Integer 타입으로 박싱해줘야 한다.
 					
 					
 			 기본 데이터 타입			  객체로 만들 때 클래스이름

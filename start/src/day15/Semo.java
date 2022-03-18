@@ -45,8 +45,9 @@ public class Semo implements Comparable {
 		
 		//정렬 기준은 높이, 내림차순할 예정이므로
 		//내 높이에서 입력된 세모의 높이를 빼주는 작업을 하면 된다.
-		int result = height - s.getHeight();
-		
+		int result = height - s.getHeight();// 결과가 음수면 두 수 위치를 바꾸지 않는다. 만일 결과값의 부호를 바꾸면 두 수 위치를 바꾼다.
+											// 반환값이 + 면 위치를 바꾸고 - 면 위치를 바꾸지 않는다.
+											// 오름차순이 기본 셋팅
 		//내림차순 정렬이므로 부호를 반전시켜준다.
 		return -result;
 	}

@@ -1,5 +1,7 @@
 package day15;
 
+//List 인터페이스 중 ArrayList 사용 
+
 import java.util.*;
 
 public class Test07 {
@@ -32,7 +34,7 @@ public class Test07 {
 				char gen = (char) o;
 				System.out.println("성별 : " + gen);
 				
-			} else if(o instanceof Double) {// 이 연산자에 기본 데이터 타입을 쓸 순 없음. 클래스 타입에만 쓸 수 있는 연산자
+			} else if(o instanceof Double) {// instanceof : 객체가 어떤 클래스 소속인지 판단, 이 연산자에 기본 데이터 타입을 쓸 순 없음. 클래스 타입에만 쓸 수 있는 연산자
 				double height = (double) o;
 				System.out.println("신장 : " + height);
 				
@@ -46,7 +48,7 @@ public class Test07 {
 		//이렇게 여러 형태의 데이터가 입력된 경우에는 데이터를 사용하는 시점에서는 원래 데이터로 강제 형변환해서 사용해야 함
 		
 		/*
-		   컬렉션의 특징을 여러 형태의 데이터를 동시에 보관할 수 있다는 것이다.
+		   컬렉션의 특징은 여러 형태의 데이터를 동시에 보관할 수 있다는 것이다.
 		   하지만 배열과 마찬가지로 한가지 타입으로만 통일해서 쓰는 게 일반적
 		 */
 	}

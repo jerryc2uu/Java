@@ -6,7 +6,7 @@ public class Test05 {
 
 	public Test05() {
 		Vector vec = new Vector(10, 5);
-		int cap = vec.capacity();//갯수 꺼내는 함수, 현재 확보해놓은 공간 알려주는 함수 <-> 사이즈는 실제 데이터가 차지하는 공간
+		int cap = vec.capacity();//capacity()는 현재 확보해놓은 빈 공간 알려주는 함수 <-> size()는 실제 데이터가 차지하는 공간
 		System.out.println("처음 공간 : " + cap);
 		
 		for(int i = 0 ; i < 16 ; i++) {

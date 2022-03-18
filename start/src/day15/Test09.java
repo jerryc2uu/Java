@@ -1,11 +1,12 @@
 package day15;
 
+//ArrayList 타입의 변수 list에 1 ~ 25 사이의 정수 10개 랜덤하게 만들어서 채워주세요
+
 import java.util.*;
 
 public class Test09 {
 
 	public Test09() {
-		//ArrayList 타입의 변수 list에 1 ~ 25 사이의 정수 10개 랜덤하게 만들어서 채워주세요
 		
 		//1.변수 list 만들기
 		ArrayList list = new ArrayList(10);

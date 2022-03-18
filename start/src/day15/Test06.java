@@ -1,6 +1,7 @@
 package day15;
 /*
    다양한 형태의 데이터를 벡터에 넣고 출력해보자
+
  */
 import java.util.*;
 
@@ -8,11 +9,11 @@ public class Test06 {
 
 	public Test06() {
 		Vector vec = new Vector();
-		
-		//데이터 입력
+	
+		//데이터 입력 (add 함수에서는 Object 타입의 데이터가 입력되어야 한다.)
 		vec.add("제니");
 		vec.add('F'); // 여기부터는 기본 데이터 타입. 자동 Boxxing -> Object 타입으로 자동 형변환
-		vec.add(27); // char --> charater --> Object
+		vec.add(27); // char 입력 --> character 자동 Boxxing --> Object 자동형변환
 		vec.add(168.5);
 		vec.add(false);
 		

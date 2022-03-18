@@ -2,6 +2,7 @@ package day15;
 /*
    5 ~ 25 사이의 랜덤한 정수를 반지름으로 하는 
 
+
    원을 기억할 클래스를 만들고
    
    원 10개를 리스트에 채워서 넓이가 넓은 원부터
@@ -35,7 +36,7 @@ public class Test11 {
 		
 		System.out.println();
 		//정렬하기
-		Collections.sort(list, new Comparator() {
+		Collections.sort(list, new Comparator() {//무명 내부 클래스 이용
 
 			@Override
 			public int compare(Object o1, Object o2) {//Won타입 데이터가 입력될 것

@@ -1,6 +1,7 @@
 package day15;
 /*
    블랙핑크 멤버를 HashSet에 저장한 후 꺼내서 출력
+
  */
 import java.util.*;
 
@@ -30,7 +31,7 @@ public class Test12 {
 			
 			System.out.println("1. Iterator를 이용하는 방법");
 		//1. Iterator로 변환
-			Iterator itor = set.iterator();//인덱스 없음
+			Iterator itor = set.iterator();//set 내부에 이미 존재하는 함수, Iterator 타입으로 반환해주는 함수
 			/*
 			   Iterator는 StringTokenizer와 유사하게 
 			   버퍼메모리에서 하나씩 순차적으로 꺼내고
@@ -40,10 +41,10 @@ public class Test12 {
 				//boolean hasNext() : 꺼낼 데이터가 남아있는지 알려주는 함수
 				
 				//데이터 꺼낸다.
-				String name = (String) itor.next(); // next() : 데이터 꺼내주는 함수
+				String name = (String) itor.next(); // next() : 데이터 꺼내서 반환해주는 함수
 				
 				//출력
-				System.out.println(name);//해쉬코드값으로 정렬해서 보관하는 것
+				System.out.println(name);//해쉬코드값으로 정렬해서 보관된 것
 			}
 			
 			System.out.println("2. List 배열로 변환해서 사용하는 방법");

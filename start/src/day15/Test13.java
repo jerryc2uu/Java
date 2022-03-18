@@ -1,6 +1,7 @@
 package day15;
 /*
   HashSet에 랜덤하게 숫자 6개를 채워보자
+
   
   set 계열의 특징
   1. 입력 순서 보장 x

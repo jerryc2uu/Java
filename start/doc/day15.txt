@@ -1,1 +1,4 @@
 #day15
+
+Math클래스 : final class
+			 private Mate() {} // 생성자가 private으로 감춰져 있어서 외부에서는 new 절대 사용 불가

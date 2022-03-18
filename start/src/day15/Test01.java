@@ -2,6 +2,7 @@ package day15;
 /*
    파라미터로 전달된 문자열 
 
+
    	http://www.blackpink.org/member/?id=ens&pw=12345&tel=01031759042
    	중에서 넘겨진 데이터만 잘라서 출력하라
    	

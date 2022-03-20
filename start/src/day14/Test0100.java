@@ -27,6 +27,8 @@ public class Test0100 extends Test0101{
 		System.out.println("전이하지 않은 예외는 추가하면 안 된다.");
 	}
 	 */
+	
+	@Override
 	void xyz() throws ArithmeticException, ClassCastException {
 		System.out.println("RuntimeException 소속의 예외라 무시가 된다.");
 	}

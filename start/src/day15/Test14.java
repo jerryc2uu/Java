@@ -1,10 +1,6 @@
 package day15;
 
 import java.util.*;
-/*
-	TreeSet은 정렬 불가능한 데이터들은 입력할 수 없다.
-	정렬 기준을 만들어서라도 정렬 가능하게 만들어야 입력 가능하다.
-*/
 public class Test14 {
 
 	public Test14() {

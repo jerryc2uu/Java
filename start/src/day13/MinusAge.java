@@ -13,5 +13,6 @@ public class MinusAge extends Exception {
 	@Override
 	public String toString() {
 		return getClass().getName() + " 음수의 나이가 입력되었습니다.";
+			//실행되는 객체의 클래스를 가져오고, 그 클래스의 이름을 찾아내서 문자열로 반환해주는 함수
 	}
 }

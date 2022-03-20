@@ -8,12 +8,14 @@ public class Test02 {
 		Random rd = new Random();
 		System.out.println(rd.nextInt());// 무슨 의미?? Random 타입 객체 내의 nextInt() 호출
 		
-		Random rd1 = new Random(10); // 꺼낼 위치(seed)를 정해놨기 때문에 매번 같은 숫자만 순차적으로 뽑아온다.
-
-		/*
+		/* 범위를 정해서도 할 수 있다.
 		   난수표에서 10번 위치부터 난수를 뽑아라
 		   seed를 알려주면서 가져오기 때문에 항상 나오는 순서가 동일
 		 */
+		
+		Random rd1 = new Random(10); // 꺼낼 위치(seed)를 정해놨기 때문에 매번 같은 숫자만 순차적으로 뽑아온다.
+
+		
 		   
 		
 		for(int i = 0 ; i < 10 ; i++) {

@@ -1,5 +1,5 @@
 package day15;
-
+// 다양한 타입의 데이터를 담을 수 있는 컬렉션
 import java.util.*;
 
 public class Test05 {

@@ -1,9 +1,6 @@
 package day14;
 /*
  	Test05를 확인한 후 이 클래스를 확인하세요.
-
- 	
- 	
  	Test03에서 만든 문자열을 줄바꿈 기호(\n)를 
  	기준으로 분리해서 배열에 담아보자 
  	
@@ -11,7 +8,11 @@ package day14;
  	1. 타입
  	2. 길이(갯수)
  */
+
+
+ 	
 import java.util.*;
+ 	
 public class Test04 {
 
 	public Test04() {

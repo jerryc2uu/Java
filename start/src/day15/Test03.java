@@ -4,8 +4,10 @@ package day15;
   이름을 입력받아서 입력한 이름이 한글이름인지를 검사하는 프로그램을 작성하라
   이름 글자수는 2글자에서 5글자까지만 허용하기로 한다.
  */
+
 import java.util.*;
 import java.util.regex.*;
+
 
 public class Test03 {
 
@@ -37,7 +39,7 @@ public class Test03 {
 		
 		//정규식 검사를 한다
 		//1. 패턴을 정의한다
-		Pattern form = Pattern.compile("[가-힣]{2,5}"); 
+		Pattern form = Pattern.compile("[가-힣]{2,5}"); // 생성자가 private이라서 속성이 static이고 반환값이 자신인 함수 대신 쓴 것
 		
 		//2. 패턴에 맞는지 검사한다.
 		Matcher mat = form.matcher(name);

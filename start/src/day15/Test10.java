@@ -2,6 +2,7 @@ package day15;
 /* 
  정렬 방식 변경해보기 (여기선내림차순으로)
 
+
 정렬 방식을 변경하기 위해서는 Comparator 인터페이스를 상속받은 클래스를 만들어야 한다.
 
  이 클래스는 Object 클래스를 상속받아 만들어졌기 때문에 이 클래스 내부에
@@ -75,8 +76,8 @@ class DownSort implements Comparator {
 		int no1 = (int) o1;
 		int no2 = (int) o2;
 		
-		result = no1 - no2;
+		result = no1 - no2;//오름차순 정렬
 		
-		return -result;
+		return -result;// 내림차순이니까 부호 바꿔준다.
 	}
 }

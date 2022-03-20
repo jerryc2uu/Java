@@ -2,7 +2,6 @@ package day15;
 /*
    5 ~ 25 사이의 랜덤한 정수를 반지름으로 하는 
 
-
    원을 기억할 클래스를 만들고
    
    원 10개를 리스트에 채워서 넓이가 넓은 원부터
@@ -10,6 +9,8 @@ package day15;
    
    ==> 객체 타입 데이터도 정렬할 수 있다.
  */
+
+
 import java.util.*;
 
 public class Test11 {
@@ -50,9 +51,9 @@ public class Test11 {
 				double area2 = w2.getArea();
 				
 				//반환값은 크기는 중요하지 않고 부호가 중요하므로
-				result = ((area1 - area2) <= 0) ? -1 : 1;
+				result = ((area1 - area2) <= 0) ? -1 : 1;//음수이면 위치 그대로, 양수이면 바꾼다. 오름차순으로 먼저 생각
 				
-				return -result;
+				return -result;//내림차순이므로 오름차순에서 부호 반전시켜준다.
 			}
 			
 		});

@@ -1,5 +1,5 @@
 package day15;
-
+//List 인터페이스 중 LinkedList 사용
 import java.util.*;
 
 public class Test08 {

@@ -1,10 +1,8 @@
 package day14;
 /*
-   문자열 데이터
-
-
+   문자열 데이터 잘라보기
    
-   	"제니, 리사, 로제, 지수"
+   "제니, 리사, 로제, 지수"
  */
 import java.util.*;
 
@@ -23,14 +21,15 @@ public class Test05 {
 		   결과를 재사용해야 한다면 변수나 배열에 저장시켜놔야 함
 		   
 		 */
+
 		//배열에 담아보기
-		// 잘려진 데이터의 갯수를 반환해주는 함수. 
-		int len = token.countTokens();
+		int len = token.countTokens();// 잘려진 데이터의 갯수를 반환해주는 함수. 
+		
 				
 		//데이터를 기억할 배열
 		String[] pink = new String[len];
 		
-		//인덱스 변수 만들고
+		//인덱스 변수 만들고(while문에는 카운터변수가 없기 때문)
 		int idx = 0; 
 				
 		// 하나씩 꺼내서 출력한다.
@@ -54,7 +53,7 @@ public class Test05 {
 		}
 		
 		System.out.println("---------------------------------------");
-		//꺼낸 데이터 다시 꺼내려 하면 실행조차 안 함
+		//꺼낸 데이터 다시 꺼내려 하면 실행조차 안 함 (1회 사용 후 소멸하기 때문에)
 		while(token.hasMoreTokens()) {
 			
 			//String black = token.nextToken();

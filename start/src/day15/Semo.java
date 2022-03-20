@@ -1,5 +1,7 @@
 package day15;
-
+//정렬 가능한 클래스로 만들어주는 방법
+//Comparable 인터페이스를 구현해면 된다.
+// 유일한 compareTo 함수를 오버라이딩 하면 된다.
 public class Semo implements Comparable {
 	private int width, height; 
 	private double area;

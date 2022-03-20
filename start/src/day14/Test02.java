@@ -15,10 +15,10 @@ public class Test02 {
 		
 		System.out.println("n1과 n2 네모는 " + result + " 네모입니다.");
 		System.out.println("n1 : \n\t " + n1);
-		System.out.println("n1 : \n\t " + n2);
+		System.out.println("n2 : \n\t " + n2);
 		System.out.println();
 		System.out.println("n1 == n2 : " + (n1 == n2)); //false인 이유 : 주소값 비교이기 때문
-														// 레퍼런스 타입은 절대로 이렇게 하면 안 된다. 내용 비교하려면 equals() 호출
+														// 레퍼런스 타입은 절대로 이렇게 하면 안 된다. 내용 비교하려면 오버라이딩한 equals() 호출
 	}
 
 	public static void main(String[] args) {

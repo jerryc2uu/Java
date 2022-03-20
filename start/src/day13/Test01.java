@@ -7,20 +7,20 @@ import day12.sub.*;
    무명내부클래스를 만들어서 사용해보자
  */
 public class Test01 {
-	int width = (int)(Math.random()*21+5);//전역변수 : 프로그램 종료 시까지 유지, heap에 생성
+	int width = (int)(Math.random()*21+5);//전역(멤버)변수 : 프로그램 종료 시까지 유지, heap에 생성
 	int height = (int)(Math.random()*21+5);
 	double area;
 	Figure fig, fig1;
 	
 	
-	public Test01() {
+	public Test01() {//함수(블럭) 안에서 만들어지는 변수는 블럭이 끝나면 모두 사라짐, stack에 생성
 		//int width = (int)(Math.random()*21+5);  ==> 변수에서 만든 리터럴이 리터럴 풀에 쌓임. 함수 호출 시 그 리터럴 자체를 사용(변수에 접근하지 않음)
 		//int height = (int)(Math.random()*21+5);
 		//double area;       ==> 함수 실행 후에는 이미 사라지고 없는 변수, stack에 생성
 		
 		
 		//사각형
-		fig = new Figure() {
+		fig = new Figure() {//heap에 생성, 프로그램 종료 시까지 유지
 			@Override
 			public void setArea() {
 				area = width * height;

@@ -1,9 +1,10 @@
 package day15;
 /*
    블랙핑크 멤버를 HashSet에 저장한 후 꺼내서 출력
-
  */
 import java.util.*;
+
+
 
 public class Test12 {
 
@@ -49,7 +50,7 @@ public class Test12 {
 			
 			System.out.println("2. List 배열로 변환해서 사용하는 방법");
 		//2. List 계열로 변환
-			Vector vec = new Vector(set);//set에 저장된 데이터로 Vector를 만든다.
+			Vector vec = new Vector(set);//set에 저장된 데이터로 Vector를 만든다는 뜻, 다른 컬렉션 데이터 복사해서 만든 것
 			
 			//데이터 꺼내서 출력//인덱스 있음
 			for(int i = 0 ; i < vec.size(); i++) {

@@ -1,12 +1,13 @@
 package day15;
 /*
    파라미터로 전달된 문자열 
-
-
    	http://www.blackpink.org/member/?id=ens&pw=12345&tel=01031759042
    	중에서 넘겨진 데이터만 잘라서 출력하라
    	
  */
+
+
+
 import java.util.*;
 
 public class Test01 {
@@ -18,11 +19,12 @@ public class Test01 {
 		//? 기호의 위치값을 알아낸 후 그 바로 다음 위치에서부터 끝까지 잘라내면 된다.
 		//StringTokenizer는 따로 배열에 담아야해서 귀찮어
 		
-		int idx = url.indexOf('?');//url.은 String 클래스 타입의 멤버에 접근해서 사용하겠다는 의미 
+		int idx = url.indexOf('?');//indexOf() : 문자 위치 알아내는 함수
+									//url.은 String 클래스 타입의 멤버에 접근해서 사용하겠다는 의미 
 									// Math.radom()//Math 클래스 안의 멤버 random() 쓰겠다는 의미 
 								   //indexOf : 특정 문자의 위치값 알아내는 함수
-		String param = url.substring(idx + 1); //=>id=ens&pw=12345&tel=01031759042
-		
+		String param = url.substring(idx + 1); // substring() : 문자열 자르는 함수 ,,, =>id=ens&pw=12345&tel=01031759042
+												// ? 바로 뒤부터 끝까지 자른다.ㅅ
 		System.out.println(param);
  		
 		//만들어진 문자열을 &를 기준으로 잘라내서 배열에 담아본다.

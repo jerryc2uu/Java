@@ -2,7 +2,6 @@ package day13;
 
 /*
    blackpink.txt. 파일을 읽어서 출력해보자
-
  */
 
 import java.io.*;//input output 장치 관련 패키지

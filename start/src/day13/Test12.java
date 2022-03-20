@@ -1,5 +1,8 @@
 package day13;
-
+/*
+sno를 정수로 변환하는데 예외가 발생하면
+-999로 변환하세요.
+*/
 public class Test12 {
 
 	public Test12() {

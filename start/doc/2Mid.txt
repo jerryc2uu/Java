@@ -3,9 +3,9 @@
  
  	종류
  	
- 		1. HashMap(or HashTable) : 해쉬코드 기준으로 정렬하는 클래스
+ 		1. HashMap : 해쉬코드 기준으로 정렬하는 클래스
  		
- 			주요함수
+ 			주요 함수
  			
  				1) put(Object key, Object value) : 데이터 입력
 				
@@ -13,14 +13,39 @@
 					
 				3) values() : 데이터들만 꺼냄 (반환값 Collection)
 				
-				4) keys()  : 키값들만 꺼냄 (반환값이 Enumeration = Iterator의 구버전)
+ 				4) keySet() : 키값들만 꺼냄 (반환값이 Set, 키값은 중복해서 쓰면 안 된다.)
+				
  		
- 				5) keySet() : 키값들만 꺼냄 (반환값이 Set, 키값은 중복해서 쓰면 안 된다.)
+ 		2. HashTable : 해쉬코드 기준으로 정렬하는 클래스
+ 		 	
+ 		 	주요 함수
+ 		 		
+ 		 		1) keys()  : 키값들만 꺼냄 (반환값이 Enumeration = Iterator의 구버전)
+ 		 		
+ 		 		2) keySet()	: 키값들만 꺼냄
  		
- 				+) entrySet() : 키값과 데이터를 Set으로 묶는 함수 (Map.Entry 클래스의 멤버)
+ 		
+ 		3. Map.Entry : Key와 Value 변수만 있는 VO클래스
+ 		
+ 			주요 함수 
+ 				
+ 				1) entrySet() : 키값과 데이터를 Set으로 묶는 함수
+ 		
+ 		
+ 		
+ 		4. TreeMap : 키값으로 정렬하는 클래스
+ 		
+ 		
+ 		
+ 		5. Properties : Map의 역할을 하는 클래스
+ 						파일(외부장치)을 읽어 Map처럼 저장하거나 Map에 저장된 데이터를 파일로 저장할 수 있다.
+ 						 		
+ 				사용법
+ 				
+ 					  1) cmd 창을 연다.
+					  2) path에 JAVA_HOME이 등록되어 있는지 확인하고
+					  3) native2ascii 명령을 사용해서 인코딩한다.	
  				
  				
- 				해쉬맵은 키셋만, 해쉬테이블은 키셋이랑 키 모두 가능
-  				맵의 데이터는 키값으로 정렬하는 거고 데이터로 정렬하는 게 아님
  				
- 		2. TreeMap : 키값으로 정렬하는 클래스
+ 		

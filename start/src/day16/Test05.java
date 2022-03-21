@@ -47,6 +47,26 @@ public class Test05 {
 		for(Object key : keys1) {
 			System.out.println(key + " : " + map.get(key));
 		}
+		System.out.println("==============================================================");
+		
+		// Map.Entry로 꺼내서 처리하는 방법
+		
+		Set set = map1.entrySet(); // 데이터 갯수만큼 map.entry 객체가 들어있다.
+		System.out.println("&&&&&&&&&&&&" + set.size());
+		// 추가된 데이터 갯수만큼 Map.Entry를 만들어서 Set에 추가해서 반환
+		Iterator itor = set.iterator();// Set을 순차적으로 꺼낼 목적으로 Iterator로 변환시켜둔 것, 내용물은 그대로
+		while(itor.hasNext()) {
+			Object obj = itor.next();//한 번 꺼내면 사라지므로 변수에 기억시켜둔다.
+			Object key = ((Map.Entry) obj).getKey();
+			Object value = ((Map.Entry) obj).getValue();
+			
+			String name = (String) key;
+			int age = (int) value;
+			
+			//출력
+			System.out.println(name + " : " + age);
+		}
+		
 		
 		
 	}

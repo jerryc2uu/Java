@@ -52,6 +52,7 @@ public class Nemo {
 		return String.format("이 사각형은 가로가 %3d, 세로가 %3d, 면적이 %6.2f 입니다.", width, height, area);
 	}
 	
+	//HashSet은 해쉬코드로 정렬하기 때문에 해쉬코드를 안 만들면 중복 데이터가 입력된다.
 	@Override
 	public int hashCode() {
 		return 1; // 이 클래스의 객체는 이제부터 모두 해쉬코드값을 1을 갖는다.

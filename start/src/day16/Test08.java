@@ -1,16 +1,19 @@
 package day16;
 /*
    data.txt 파일을 읽어서 Map으로 저장해보자
+
  */
 import java.io.*;
 import java.util.*;
+
 public class Test08 {
 
 	public Test08() {
 		Properties prop = new Properties();
 		//이 Map을 외부 파일과 연결할 예정이다.
 		
-		FileInputStream fin = null;
+		//나중에 배울 거니까 그렇구나 하고 넘어가기
+		FileInputStream fin = null;//파일 위치가 없으면 예외가 발생할 테니까
 		try {
 			fin = new FileInputStream("src/day16/data_ko.txt");//통로
 			// 여기 경로는 전체 절대 경로를 사용해도 된다.

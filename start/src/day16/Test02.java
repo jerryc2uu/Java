@@ -1,5 +1,6 @@
 package day16;
 //<map 계열>
+
 //HashTable에 친구의 정보를 기억시켜보자.
 import java.util.*;
 public class Test02 {
@@ -50,32 +51,33 @@ public class Test02 {
 		System.out.println();
 		
 		
-		//키값만 추출
+		//키값만 추출==> map 전달 받았는데 어떤 키값이 있는지 모를 때 사용
 		Enumeration en = table.keys();
 		while(en.hasMoreElements()) {
 			Object o = en.nextElement();
-			System.out.println(o);
-			System.out.println("\t : " +table.get(o));
+			System.out.println(o);//키값만 출력
+			System.out.println("\t : " +table.get(o));//위의 키값 이용해서 데이터 출력
 		}
 		System.out.println();
 		
-		//키값만 추출 2번
+		//키값만 추출 2번 
 		Set set = table.keySet();
 		Iterator it = set.iterator();
 		while(it.hasNext()) {
-			Object o = it.next();
-			Object data = table.get(o);
+			Object o = it.next();//키값 꺼냄
+			Object data = table.get(o);//키값으로 데이터 꺼냄
 			//출력
 			System.out.println(o + " - " + data);
 		}
 		
 		System.out.println();
 		
-		//entrySet()
-		Set entry = table.entrySet();//Set 1개 = Map.entry 타입 여러 개 = key와 value가 한 쌍인 vo클래스
+		//정 이해 안 가면 스킵...
+		//entrySet()  map에는 데이터가 여러 개 채워질 수 있다. 이걸로 map.entry를 만들어서 Set에 넣은 것
+		Set entry = table.entrySet();//Set 1개 = Map.entry 타입 데이터 여러 개//Map.entry 객체 한 개 = key와 value가 한 쌍인 vo클래스
 		Iterator it3 = entry.iterator();
 		while(it3.hasNext()) {
-			Map.Entry en1 = (Map.Entry) it3.next();
+			Map.Entry en1 = (Map.Entry) it3.next();//Object로 꺼내진 걸 원래 형태로 강제 형변환
 			Object key = en1.getKey();
 			Object value = en1.getValue();
 			System.out.println(key + " : " + value);

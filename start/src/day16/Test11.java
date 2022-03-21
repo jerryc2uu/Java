@@ -1,12 +1,13 @@
 package day16;
 /*
-   <제너릭스>
-
-   
+   <제너릭스> : 전파되지 않기에 매번 해줘야 한다.
    blackpink 멤버들의 이름을 기억하는 Set을 만들어서 출력해보자
    이때 문자열만 입력되도록 처리하세요
  */
 import java.util.*;
+
+
+   
 public class Test11 {
 
 	public Test11() {
@@ -32,7 +33,7 @@ public class Test11 {
 			System.out.println(name);
 		}
 		System.out.println();
-		Iterator<String> itor = set.iterator();
+		Iterator<String> itor = set.iterator();//set에는 문자열만 넣기로 했으니까
 		while(itor.hasNext()) {
 			String name = itor.next();
 			System.out.println(name);

@@ -17,7 +17,7 @@ public class Test04 {
 		//2. 패턴에 맞는지 검사한다
 		Matcher mat = form.matcher(tel);
 		//3. 검사 결과 중 형식에 맞는 부분 추출
-			// find() : 규칙에 맞는 부분을 확인해주는 함수. 반환값은 ture of false, 문자열 중에서 그 형식에 맞는 부분이 있는지 검사
+			// find() : 규칙에 맞는 부분을 확인해주는 함수. 반환값은 ture of false//문자열 중에서 그 형식에 맞는 부분이 있는지 검사
 			// group() : 규칙에 맞는 부분을 반환해주는 함수
 			if(mat.find()) {
 				String hp = mat.group();
@@ -25,7 +25,10 @@ public class Test04 {
 				System.out.println("전화번호 : " + hp);
 			}
 			/*
-			    adfkljalkdfj가나다adfkjasljdsl  
+			    adfkljalkdfj가나다adfkjasljdsl 
+			    
+			     ==> find()는 true로 판단
+			      	 matches()는 false로 판단
 			 */
 	}
 		

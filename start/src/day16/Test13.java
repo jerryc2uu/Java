@@ -34,7 +34,7 @@ public class Test13 {
 	}
 	
 	public void xyz(ArrayList<? extends Son> list) {
-	// == ArrayList<Son> list와 같은 의미
+	// == ArrayList<Son> list와 같은 의미 : Son 상속 받은 모든 클래스 가능
 	//이 함수 호출 시 Son이나 그 하위 클래스 객체를 입력한 리스트를 입력해야 한다. 
 	}
 	

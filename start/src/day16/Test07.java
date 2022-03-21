@@ -14,7 +14,7 @@ public class Test07 {
 	}
 	
 	// 1 ~ n까지의 합을 구해서 반환해주는 함수
-	public int getSum(int n) {
+	public int getSum(int n) {//언제까지 더할지 알려준다.
 		//재귀 호출함수는 반드시 호출 종료지점을 기술해야 한다!!
 		if(n < 1) {
 			return 0;

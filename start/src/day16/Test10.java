@@ -1,8 +1,9 @@
 package day16;
 /*
    프로그램에 관련된 정보를 자동으로 뽑아서 구경해보자
-   
  */
+
+   
 import java.util.*;
 public class Test10 {
 

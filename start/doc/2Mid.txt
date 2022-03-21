@@ -1,0 +1,26 @@
+
+ <Map 계열> : 키값과 데이터를 한 쌍으로 기억
+ 
+ 	종류
+ 	
+ 		1. HashMap(or HashTable) : 해쉬코드 기준으로 정렬하는 클래스
+ 		
+ 			주요함수
+ 			
+ 				1) put(Object key, Object value) : 데이터 입력
+				
+				2) get(Object key) : 데이터 꺼냄
+					
+				3) values() : 데이터들만 꺼냄 (반환값 Collection)
+				
+				4) keys()  : 키값들만 꺼냄 (반환값이 Enumeration = Iterator의 구버전)
+ 		
+ 				5) keySet() : 키값들만 꺼냄 (반환값이 Set, 키값은 중복해서 쓰면 안 된다.)
+ 		
+ 				+) entrySet() : 키값과 데이터를 Set으로 묶는 함수 (Map.Entry 클래스의 멤버)
+ 				
+ 				
+ 				해쉬맵은 키셋만, 해쉬테이블은 키셋이랑 키 모두 가능
+  				맵의 데이터는 키값으로 정렬하는 거고 데이터로 정렬하는 게 아님
+ 				
+ 		2. TreeMap : 키값으로 정렬하는 클래스

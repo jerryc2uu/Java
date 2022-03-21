@@ -33,7 +33,8 @@ public class Test03 {
 		   		   	 			==> 검사 결과를 Matcher 클래스 타입으로 반환해준다.
 		   		   	 				따라서 이 클래스 객체 내부에 모든 검사 결과가 기억되어 있다.
 		   		   	
-		   		   	검사 결과 꺼내오는 함수 : matches() // true or false로 반환
+		   		   	검사 결과 꺼내오는 함수 : matches() // true or false로 반환, 형식대로 문자열이 그대로 만들어졌는지 검사
+		   		   												
 		 */
 		   		   	
 		

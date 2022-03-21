@@ -1,4 +1,4 @@
-package day15.ex;
+package day15.solv;
 
 import java.util.*;
 
@@ -13,18 +13,7 @@ public class Ex02 {
 
 	public Ex02() {
 		
-		TreeSet set = new TreeSet();
-		
-		//데이터 입력
-		for(int i = 0 ; i < 10 ; i++) {
-			int no = (int)(Math.random()*(99-1+1)+1);
-			set.add(no);
-		}
-		//출력
-		ArrayList list = new ArrayList(set);
-
-		//내림차순 정리
-		Collections.sort(list, new Comparator() {
+		TreeSet set = new TreeSet(new Comparator() {
 
 			@Override
 			public int compare(Object o1, Object o2) {
@@ -34,19 +23,29 @@ public class Ex02 {
 				int no2 = (int) o2;
 				
 				result = no1 - no2;
-				
+						
 				return -result;
 			}
 			
-		});  
+			
+		});
 		
-		for(Object o : list) {
-			int no = (int) o;
-			System.out.print(no + " ");
+		while(true) {
+			set.add((int)(Math.random()*(99-1+1)+1));
+			if(set.size() == 10) {
+				break;
+			}
 		}
 		
-		
-		
+		for(Object o : set) {//향상된 for 명령 쓰면 set 계열도 꺼내기 가능, 되도록이면 쓰지 않기
+			System.out.println(o);
+		}
+		/*
+		Iterator itor = set.iterator();
+		while(itor.hasNext()) {
+			System.out.println(itor.next());
+		}
+		*/
 	}
 
 	public static void main(String[] args) {

@@ -1,6 +1,7 @@
 package day16;
 /*
    4명의 학생들의 점수를 map에 담아서 관리하자
+
  */
 import java.util.*;
 public class Test04 {

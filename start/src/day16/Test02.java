@@ -1,4 +1,5 @@
 package day16;
+//<map 계열>
 //HashTable에 친구의 정보를 기억시켜보자.
 import java.util.*;
 public class Test02 {

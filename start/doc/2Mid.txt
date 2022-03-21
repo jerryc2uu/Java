@@ -1,50 +1,207 @@
+  컬렉션
+   
+	1. List 계열 : 입력 순서 보장 o, 중복 데이터 o
 
- <Map 계열> : 키값과 데이터를 한 쌍으로 기억
- 
- 	종류
- 	
- 		1. HashMap : 해쉬코드 기준으로 정렬하는 클래스
- 		
- 			주요 함수
- 			
- 				1) put(Object key, Object value) : 데이터 입력
+		  
+		  1) Vector : 배열 형태로 데이터 보관하는 컬렉션
+		   
+		     
+		     
+		     * 생성 방법
+		
+				- Vector() : 최초 배열 크기 10, 이후는 2배씩 증가
+			 	
+			 	- Vector(Collection c) : 다른 컬렉션 데이터 복사
 				
-				2) get(Object key) : 데이터 꺼냄
+				- Vector(int initialCapacity) : 배열 크기 직접 지정
+				
+				- Vector(int initialCapacity, int capacityIncrement) : 배열 크기/추가 크기 지정
+		
+		     
+		     
+		     * 주요 함수 : 기능은 같고 매개변수만 다름
+			
+				- 데이터 입력 함수
+			
+				  add(Object obj) : 자바에서 사용하는 모든 데이터 입력 가능한 함수
+				  
+				  add(int index, Object element)				  
+				  
+				  addAll(Collection c) : 다른 컬렉션에 있는 데이터 모두 입력 가능			　
+				  
+				  addAll(int index, Collection c)
+				  
+				  addElement(Object obj)				  	
+				　
+				  insertElementAt(Object obj, int index)		
+			
+			
+				- 데이터 수정 함수 : 해당 위치 데이터를 다른 데이터로 교체
+							
+			   	  set(int index, Objcet element)
+				  
+				  setElementAt(Object obj, int index)
+								  
+								  		
+				- 데이터 꺼내는 함수		   
+								
+				  get(int index)
+				  
+				  elementAt(int index)
+			      
+			      firstElement() : 첫번째 요소가 뭔가?
+			      
+			      lastElement()
+			      
+			      elements()		  
+			 				  
+							  
+		
+		
+		   2) ArrayList : Vector의 신버전 컬렉션
+			
+
+		
+		 
+		
+		   3) LinkedList : 이중 연결 리스트 방식으로 데이터 보관하는 컬렉션
+			
+		
+		
+		
+		   4) 컬렉션 이용 시 참고할 클래스
+		
+		      
+		      * Iterator : 다양한 데이터를 한 가지 방법으로 꺼내기 위해서만 사용하는 클래스
+				  
+				- List, Set 계열을 Iterator로 변환시켜 사용
+		 		
+		 		- 순차적으로 꺼낸 뒤 즉시 삭제
+		
+		      
+		      * Collections : 컬렉션 이용 시 필요한 부가 기능 제공하는 클래스 
+				
+				- 매개변수 :　Collection -> List or Set
+					        	 List    ->   List
+							 	Set    ->   Set
+							 	Map   ->   Map
 					
-				3) values() : 데이터들만 꺼냄 (반환값 Collection)
+				- sort() = 오름차순
+				  
+				  sort(List list, Comparator c) = 내림차순
+  
+
+
+
+
+   	  2. Set 계열 : 입력 순서 보장 x (규칙 따로), 중복 데이터 x  
+		 			
+		 			  =>  꺼내는 함수가 없어서  1) Iterator로 변환
+						                        2) List 계열로 변환
+						
+	
+		     * 종류
+		
+				1) HashSet : HashCode로 정렬해서 보관하는 컬렉션
+			
+				2) TreeSet : Tree Sort 알고리즘으로 오름차순 보관하는 컬렉션
+			
+			  
+			  * 생성 방법
+			     
+			     - TreeSet(Comparator comparator) : 정렬 방식 변경해서 생성
+			     
+			     - TreeSet(SortedSet<E> s) : TreeSet으로 다시 TreeSet 생성
+		    
+		      
+		      * 참고 함수
+			
+				1) subSet() : 특정 부분만 골라서 새로운 Set 생성
+			   	
+			   	2) headSet(E toElement) : 처음부터 지정한 부분까지 골라서
+			 	
+			 	3) tailSet(E fromElement) : 지정한 부분에서 마지막까지 골라서
+
+
+      3. Map 계열 : 입력 순서 보장 x, 중복 데이터 o (키값은 중복 불가)			
+ 					
+ 					 키값과 데이터를 한 쌍으로 기억
+ 
+			 *	종류
+			 	
+			 		1) HashMap : 해쉬코드 기준으로 정렬하는 클래스
+			 		
+			 			* 주요 함수
+			 			
+			 				- put(Object key, Object value) : 데이터 입력
+							
+							- get(Object key) : 데이터 꺼냄
+								
+							- values() : 데이터들만 꺼냄 (반환값 Collection)
+							
+			 				- keySet() : 키값들만 꺼냄 (반환값이 Set, 키값은 중복해서 쓰면 안 된다.)
+							
+			 		
+			 		2) HashTable : 해쉬코드 기준으로 정렬하는 클래스
+			 		 	
+			 		 	* 주요 함수
+			 		 		
+			 		 		1) keys()  : 키값들만 꺼냄 (반환값이 Enumeration = Iterator의 구버전)
+			 		 		
+			 		 		2) keySet()	: 키값들만 꺼냄
+			 		
+			 		
+			 		3) Map.Entry : Key와 Value 변수만 있는 VO클래스
+			 		
+			 			* 주요 함수 
+			 				
+			 				1) entrySet() : 키값과 데이터를 Set으로 묶는 함수
+			 		
+			 		
+			 		
+			 		4) TreeMap : 키값으로 정렬하는 클래스
+			 		
+			 		
+			 		
+			 		5) Properties : Map의 역할을 하는 클래스
+			 						
+			 						파일(외부장치)을 읽어 Map처럼 저장하거나 Map에 저장된 데이터를 파일로 저장할 수 있다.
+			 						 		
+			 				사용법
+			 				
+			 					  1) cmd 창을 연다.
+			 					  
+								  2) path에 JAVA_HOME이 등록되어 있는지 확인하고
+								  
+								  3) native2ascii 명령을 사용해서 인코딩한다
+
+
+--------
+
+	<제너릭스> : 컬렉션에 입력되는 데이터를 강제하는 것
+	
+		형식 :  ArrayList<String> list = new ArrayList<String>(); 
 				
- 				4) keySet() : 키값들만 꺼냄 (반환값이 Set, 키값은 중복해서 쓰면 안 된다.)
+				==> 문자열만 입력 가능
 				
- 		
- 		2. HashTable : 해쉬코드 기준으로 정렬하는 클래스
- 		 	
- 		 	주요 함수
- 		 		
- 		 		1) keys()  : 키값들만 꺼냄 (반환값이 Enumeration = Iterator의 구버전)
- 		 		
- 		 		2) keySet()	: 키값들만 꺼냄
- 		
- 		
- 		3. Map.Entry : Key와 Value 변수만 있는 VO클래스
- 		
- 			주요 함수 
- 				
- 				1) entrySet() : 키값과 데이터를 Set으로 묶는 함수
- 		
- 		
- 		
- 		4. TreeMap : 키값으로 정렬하는 클래스
- 		
- 		
- 		
- 		5. Properties : Map의 역할을 하는 클래스
- 						파일(외부장치)을 읽어 Map처럼 저장하거나 Map에 저장된 데이터를 파일로 저장할 수 있다.
- 						 		
- 				사용법
- 				
- 					  1) cmd 창을 연다.
-					  2) path에 JAVA_HOME이 등록되어 있는지 확인하고
-					  3) native2ascii 명령을 사용해서 인코딩한다.	
+	
+	<특수한 제너릭스> : 제너릭스 선언하지 않은 것과 동일
+	
+		형식 : <? super 클래스이름> 
+		    	
+		       ==> 지정한 클래스 포함해서 상위 클래스까지 허락한다.
+			   
+			   <? extends 클래스이름> 
+			   
+			   ==> 지정한 클래스 포함해서 하위 클래스까지 허락한다.	
+			   
+	
+	<어노테이션> : 내부적으로 약속된 실행을 자동으로 처리하도록 하는 명령
+	
+		형식 : @명령   	   
+				
+				ex) @Override 		
+	
  				
  				
  				

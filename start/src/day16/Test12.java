@@ -1,6 +1,7 @@
 package day16;
 /*
   학생들의 점수를 기억하는 Map을 만들자
+
   여러 학생(String)의 한 과목 점수(Integer)
   
  */

@@ -39,13 +39,14 @@ public class Sagak {
 	/*
 	    이 클래스를 누군가 출력할 경우를 대비해서 정보를 알려주고 싶다면?
 	     toString()을 오버라이딩하여 기능을 수정하면 된다.
-	     만일 오타가 나면 오버라이딩이 아니라 새로운 함수를 더 만든 것으로 인정한다.
+	     만일 오타가 나면 오버라이딩이 아니라 새로운 함수를 더 만든 것으로 인정한다는 것을 
+	     컴파일러에게 알려줌
 	 */
 	     
 	    
 	
 	@Override
-	public String toString() {
+	public String toString() {//Object가 가지고 있는 toString() 
 		return "이 클래스는 면적이 " + area + " 인 사각형 ";
 	}
 

@@ -1,8 +1,9 @@
 package day17;
 /*
     doc 폴더 안의 파일의 목록을 알아내보자 
-    
  */
+
+    
 import java.io.*;
 public class Test05 {
 
@@ -12,6 +13,7 @@ public class Test05 {
 		
 		/*
 		//1. 목록을 꺼내보자
+		//포함된 파일 리스트를 문자열로 반환해준다
 		String[] flist = dir.list();
 		
 		//출력

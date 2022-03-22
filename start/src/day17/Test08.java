@@ -1,6 +1,7 @@
 package day17;
 /*
    파일에 내용을 저장하는 프로그램을 작성하라
+
    단 BufferedStream을 사용하라
  */
 import java.io.*;

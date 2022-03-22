@@ -1,6 +1,7 @@
 package day17;
 /*
    이전 예제에서 만든 파일을 읽어보자
+
  */
 import java.io.*;
 public class Test02 {
@@ -21,11 +22,13 @@ public class Test02 {
 			
 			/*
 			//2. 여러 글자를 읽는다.
+			//byte[] 준비
 			byte[] buff = new byte[10]; //0으로 채워진 상태
+			//읽은 갯수
 			int len = fin.read(buff); // 읽은 글자의 byte를 위의 방 buff에 채워준다.
 			
 			//byte[]을 문자열로 변환
-			String str = new String(buff, 0, len);
+			String str = new String(buff, 0, len);//String 클래스에 byte[]을 문자열로 변환해주는 함수
 			
 			//3. 출력
 			System.out.println("읽은 내용 : " + str);

@@ -3,6 +3,7 @@ package day17;
  	이미지 파일을 복사해보자
  	: 문자가 아니므로 byte 단위로 처리해야 한다.
  */
+
 import java.io.*;
 public class Test03 {
 

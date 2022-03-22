@@ -15,7 +15,7 @@ public class Test07 {
 		   System.in = System 클래스 안의 in이라는 변수
 		 */
 		System.out.print("입력해주세요! : ");
-		int ch = 0;
+		int ch = 0;//byte 단위 스트림이기 때문에 int인 것.
 		try {
 			/*
 			//1. 한 글자만 읽어보자
@@ -40,7 +40,7 @@ public class Test07 {
 			//배열의 모든 방에 기본값을 'A'로 채운다.
 			Arrays.fill(buff, (byte) 'A'); //1byte 채우는 공간에 2byte 채울 순 없으니 강제 형변환, 배열의 모든 방에 'A'로 채워넣는다.
 			int len = System.in.read(buff, 10, 100); //준비된 배열인 buff에 11번 방부터 읽은 내용을 최대 100개까지만 기억하세요 
-			String str = new String(buff, 0, len + 10);
+			String str = new String(buff, 0, len + 10);//A가 10개 채워져 있어야 하므로
 			System.out.println("입력한 내용 : " + str);
 			
 		} catch(Exception e) {

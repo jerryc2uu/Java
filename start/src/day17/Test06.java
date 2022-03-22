@@ -1,6 +1,7 @@
 package day17;
 //Scanner 이용해서 읽어보자
 import java.io.*;
+
 import java.util.*;
 public class Test06 {
 
@@ -9,11 +10,11 @@ public class Test06 {
 	   
 	   생성 방법 : Scanner sc = new Scanner(InputStream in)  // Scanner 클래스의 생성자 함수
 	                                
-	   Scanner(System.in) : System 클래스 안에 있는 static 멤버 in이라는 변수
+	   Scanner(System.in) : System 클래스 안에 있는 static 멤버(new 안 시켜도 사용 가능) in이라는 변수(InputStream), 
 	   
 	   Scanner는 장치에 연결하는 클래스 (키보드뿐 아니라 파일에도 연결 가능)
 	   
-	   Scanner(File file)
+	   Scanner(File file) : 스캐너로 파일 내용을 직접 읽어올 수도 있다!
 	   
 	 */
 	public Test06() {

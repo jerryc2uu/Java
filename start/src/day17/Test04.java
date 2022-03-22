@@ -5,6 +5,7 @@ package day17;
    3. 만들어진 파일 중 하나를 삭제한다.(폴더도 파일로 간주되므로 삭제 가능하다.)
    4. 만들어진 파일 중 하나를 다른 이름으로 변경시켜보자.
  */
+
 import java.io.*;
 public class Test04 {
 
@@ -12,8 +13,9 @@ public class Test04 {
 		// 만들고 싶은 폴더(폴더가 위치에 없어도 상관없다.)를 파일로 만든다.
 		/*
 		// 1. 폴더 1개 생성
-		File file = new File("src/day17/result/abc");
-		String msg = file.mkdir() ? "폴더 생성 성공" : "폴더 생성 실패";
+		
+		File file = new File("src/day17/result/abc");//파일 객체를 만든 것
+		String msg = file.mkdir() ? "폴더 생성 성공" : "폴더 생성 실패"; //파일 안에 있는 함수를 호출
 		
 		//2. 계층화된 폴더 생성
 		File file = new File("src/day17/result/a/b/c/d");

@@ -6,6 +6,7 @@ package day17;
 	  DataIntputStream으로 읽어야 하고
 	  읽는 순서도 같아야 한다.
  */
+
 import java.io.*;
 public class Test10 {
 

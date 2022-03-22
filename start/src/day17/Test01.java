@@ -1,6 +1,7 @@
 package day17;
-/*
+/* <FileOutStream>
     파일에 내용을 저장하는 프로그램을 만들어보자.
+
  */
 import java.io.*;
 public class Test01 {
@@ -16,19 +17,20 @@ public class Test01 {
 			// fout은 파이프, 데이터를 여기로 흘려보내면 자동적으로 처리된다.
 			/*
 			//1. 한 글자만 입력해보자
-			//fout.write('j');//char ==> int 자동 형변환
+			//fout.write('j');//char(2byte) ==> int(1byte) 자동 형변환
 			
 			//2. 여러 글자를 입력해보자
 			//문자열 준비
 			String song = "Hey boy\r\nMake 'em whistle like a missile, bomb, bomb";//\r\n : 엔터키와 같은 기능
 			//문자열 byte[]로 변환
-			byte[] buff = song.getBytes(); //getBytes() : 문자열 => byte[]
+			byte[] buff = song.getBytes(); //java.lang 패키지의 String 클래스의 getBytes() : 문자열 => byte[] 함수
 			//배열을 스트림에 흘려보낸다.
 			fout.write(buff);
 			*/
 			
 			//3. 지정한 부분만 내보내보자
 			String song = "Make 'em whistle like a missile, bomb, bomb";
+			//문자열 -> byte[] 변환
 			byte[] buff = song.getBytes();
 			fout.write(buff, 9, buff.length - 9); // 9 : 시작 인덱스, buff.length - 9 : 내보낼 갯수
 			

@@ -1,6 +1,7 @@
 package day17;
 /*
   블랙핑크 휘파람을 PrintStream으로 파일에 저장해보자
+
   콘솔에 띄우지 않고 실행 가능 파일에 저장하는 것
  */
 import java.io.*;

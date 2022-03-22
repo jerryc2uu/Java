@@ -1,0 +1,74 @@
+
+	<스트림(Stream)> : 자바에서 외부 장치와 데이터를 주고 받는 유일한 방법
+	
+	
+	
+		* 종류 (방향성)
+		
+			1. 데이터 -> 프로그램
+				
+				1) InputStream
+				
+				2) Reader
+			
+			2. 프로그램 -> 데이터
+			
+				1) OutputStream
+				
+				2) Writer
+				
+				
+				
+		* 종류 (데이터 양)
+		
+			1. byte 단위 (1byte) : 속도 느림, 기계어 처리 가능(2진수 비트코드로 전달, 실제 실행 가능한 프로그램) 
+			
+				
+				1) InputStream
+				
+					
+					* 주요 함수
+					
+						- int read() : 1byte(한 문자)만 읽는 함수, 반환값은 읽은 데이터의 타입(문자)
+						
+						- int read(byte[] b) : 여러 byte를 읽는 함수, 반환값은 읽은 데이터의 갯수(byte 수), 읽은 결과는 byte 배열에 기억 
+						
+						- int read(byte[] b, int off, int len) : 여러 byte를 읽는 함수, 반환값은 읽은 데이터의 갯수(byte 수), 배열의 지정한 위치에서부터 지정한 갯수만큼만 읽는다. 
+						
+				
+				
+				2) FileIntputStream : 파일에 연결되는 입력용 스트림
+				
+					
+					* 생성 방법(생성자) : FileIntputStream(String name//==파일 이름)
+					
+						
+				
+				3) FileOutputStream : 파일로 연결된 내보내는 방향의 스트림
+				
+					
+					* 기본 함수 (OutputStream의 기본함수들) 
+					
+						- void write(int b) : 1byte만 내보내는 함수
+						
+						- void write(byte[] b) : 여러 byte를 내보내는 함수
+						
+						- void write(byte[] b, int off, int len) : 여러 문자 중 지정한 부분(int off : 시작 위치, int len : 데이터 갯수)만 내보내는 함수 
+																				
+						
+			
+			2. char 단위 (2byte) : 속도 빠름, 문자 처리만 가능(txt파일 등) 
+			
+				1) -Reader
+				
+				2) -Writer
+				
+				
+				
+		* 종류 (상대방 종류)
+		
+			1. 타겟(기본) 스트림 : 외부 장치에 직접 연결되는 스트림
+			
+			2. 필터(보조) 스트림 : 스트림에	연결되는 스트림 (스트림 속도 향상 및 편의 개선 목적)
+			
+				+) 기본 스트림은 필수, 필터 스트림은 필요에 의한 선택

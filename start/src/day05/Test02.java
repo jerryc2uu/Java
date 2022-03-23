@@ -5,6 +5,7 @@ package day05;
 
 
 
+
    그 숫자가 짝수인지 홀수인지를 판별해서 출력하세요.
    단, 0인 경우는 0으로 출력하세요.
    
@@ -16,7 +17,6 @@ import java.util.*;
 public class Test02 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		//입력받을 준비
 		Scanner sc = new Scanner(System.in);
 		

@@ -4,6 +4,7 @@ package day04;
     정수 하나를 입력받아서
 
 
+
     이 수가 0인지 홀수인지 짝수인지 판별하세요.
     
     참고]
@@ -30,7 +31,7 @@ public class Test01 {
 		int num = sc.nextInt();
 		
 		// 조건에 따라서 판별하고
-		String soo = "[영]";
+		String soo = "영";
 		
 		// 홀수인 경우
 		if(num % 2 != 0) {//num % 2 == 1

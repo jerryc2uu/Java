@@ -11,6 +11,6 @@ public class Test02 {
 		
 		System.out.println("name1 : " + name1);
 		System.out.println("name2 : " + name2);
-		System.out.println("name1 == name2 : " + (name1 == name2 ));
+		System.out.println("name1 == name2 : " + (name1 == name2 ));//데이터가 아니라 주소값 비교하는 것이기 때문에 false
 	}
 }

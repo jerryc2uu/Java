@@ -8,7 +8,7 @@ public class Test03 {
 		
 		System.out.println("result : " + result);
 		
-		result = result << 3; // 2dml 3승을 곱한 값
+		result = result << 3; // 2의 3승을 곱한 값
 		System.out.println("result : " + result);
 		
 		System.out.println(">> 1 : " + (-64 >> 1));

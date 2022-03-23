@@ -18,7 +18,7 @@ public class Test04 {
 			br = new BufferedReader(fr);
 			
 			//읽은 데이터 기억할 배열 준비
-			char[] buff = new char[1024];//한 번에 1024 문자 일괄적으로 처리
+			//char[] buff = new char[1024];//한 번에 1024 문자 일괄적으로 처리 => 밑에서 문자열로 바로 뽑아내므로 불필요
 			
 			//몇 번 읽어야할지 모르므로
 			while(true) {

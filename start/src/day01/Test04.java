@@ -9,7 +9,7 @@ public class Test04 {
 	 	가 올 수 있다.
 	 	
 	 	==> 이 말은 클래스는 
-	 		변수와 함수로 구성된다.
+	 		변수와 함수로 구성된다는 뜻
 	 */
 	
 	public static void main(String[] aaa) {

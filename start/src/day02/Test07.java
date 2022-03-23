@@ -11,9 +11,9 @@ public class Test07 {
 		// 'a' 의 다섯번째 이후 문자를 출력하세요.
 		char ch = 'a';
 		
-		int num = ch + 5;
+		int num = ch + 5; // 아스키코드값으로 기억됨
 		
-		// 문자로 변환
+		// 따라서 문자로 변환
 		char ch1 = (char) num;
 		
 		System.out.println("'a' 보다 5번째 이후 문자 : " + ch1);

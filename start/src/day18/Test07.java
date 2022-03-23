@@ -2,7 +2,9 @@ package day18;
 /*
    Test06에서 전달한 jennie.txt 파일을 읽어보자
 
-    ObjectOutputStream으로 저장한 파일은 반드시 ObjectInputStream으로 읽어야 한다.
+    1. ObjectOutputStream으로 저장한 파일은 반드시 ObjectInputStream으로 읽어야 한다.
+    2. 보내는 쪽과 받는 쪽에 동일한 클래스가 있어야 한다.(클래스 내용이 같아야 한다는 뜻, 중간에 수정하면 다시 보내야 한다.) 
+
  */
 import java.io.*;
 public class Test07 {

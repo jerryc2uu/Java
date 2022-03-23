@@ -10,5 +10,6 @@ public class Test06 {
 		 float pi;
 		 // 강제 형변환을 이용한 초기화
 		 pi = (float) 3.14;
+		 System.out.println(pi);
 	}
 }

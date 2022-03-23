@@ -17,7 +17,7 @@ public class Test06 {
 		boolean bool1 = name1 == name2; // 변수가 기억하는 주소를 비교한다.
 		
 		// equals()로 비교
-		boolean bool2 = name1.equals(name2);
+		boolean bool2 = name1.equals(name2); // 데이터를 비교한다.
 		
 		System.out.println("name1 == name2 : " + bool1);
 		System.out.println("name1.equals(name2) : " + bool2);

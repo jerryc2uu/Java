@@ -15,7 +15,6 @@ import java.util.*;
 public class Test04 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		//조건이 여러가지인 경우 if~else if 구문으로 처리하는 것이 편하다.
 		
 		//할일

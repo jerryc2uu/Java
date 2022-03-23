@@ -2,6 +2,7 @@ package day05;
 
 /*
    정수를 입력받아서 
+   
 
 
    그 숫자가 짝수인지 홀수인지를 판별해서 출력하세요.
@@ -13,7 +14,6 @@ import java.util.*;
 public class Test03 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		//입력받을 준비
 		Scanner sc = new Scanner(System.in);
 		

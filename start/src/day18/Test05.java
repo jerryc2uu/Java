@@ -1,6 +1,7 @@
 package day18;
 /*
  	1. BufferedReader/BufferedWriter 사용해서 파일을 복사해보자.
+
  	2. PrintWriter를 이용해서 blackpink.txt 파일을 복사해보자
  */
 import java.io.*;

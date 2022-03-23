@@ -1,6 +1,7 @@
 package day18;
 /*
    이미지 파일을 문자 단위 스트림으로 복사해보자
+
     result / Juyeon.jpg ==> Juyeon_copy.jpg
    원칙은 문자 기반 스트림으로 주고받으면 안 된다.
    바이트코드가 역순이 될 수 있기 때문에

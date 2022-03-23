@@ -1,6 +1,7 @@
 package day18;
 /*
    Test06에서 전달한 jennie.txt 파일을 읽어보자
+
     ObjectOutputStream으로 저장한 파일은 반드시 ObjectInputStream으로 읽어야 한다.
  */
 import java.io.*;
@@ -17,7 +18,8 @@ public class Test07 {
 			oin = new ObjectInputStream(fin);
 			
 			//클래스 통째로 읽어온다. Friend 타입으로 넘겨줬으므로 읽을 때도 마찬가지
-			Friend jny = (Friend) oin.readObject(); //Object 타입으로 읽을 것이므로 강제 형변환
+			Friend jny = (Friend) oin.readObject(); //readObject()의 반환값이 Object 타입이므로 강제 형변환
+			
 			String name = jny.getName();
 			String tel = jny.getTel();
 			String mail = jny.getMail();

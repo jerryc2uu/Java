@@ -73,7 +73,7 @@ public class Friend implements Serializable {//소속 함수가 없어서 오버
 	}
 	
 	@Override
-	public String toString() {
+	public String toString() {//데이터 내용 확인 용도
 		return "Friend [name=" + name + ", tel=" + tel + ", mail=" + mail + ", addr=" + addr + ", blood=" + blood
 				+ ", age=" + age + ", height=" + height + ", gen=" + gen + ", rh=" + rh + "]";
 	}

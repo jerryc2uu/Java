@@ -35,14 +35,14 @@ public class PingClient01 {
 			out = socket.getOutputStream();
 			
 			// 스트림이 준비됐으니 데이터를 서버에 전달해보자
-			String msg = "머선 129";
+			String msg = "이제리 사랑해";
 			// 바이트 배열로 변환
 			byte[] buff = msg.getBytes();
 			// 이것을 서버에 보낸다.
 			out.write(buff);
 			// 메세지를 보내면 서버가 응답 메세지를 보내준다.
 			// 응답 메세지를 받아서 출력해보자.
-			buff = new byte[1024];
+			buff = new byte[10240];
 			int len = in.read(buff);
 			//읽은 데이터를 문자열로 변환
 			msg = new String(buff, 0, len);

@@ -7,12 +7,22 @@ package day05.ex;
  */
 
 public class Ex02_01 {
-
+	
+	
 	public static void main(String[] args) {
 
-		int no = (int)(Math.random() * (10 - 3 + 1) + 3);
+		//int no = (int)(Math.random() * (10 - 3 + 1) + 3);
 		
-
+		String str = "asdfgdf";
+		
+		char ch = str.charAt(0);
+		String namuji = str.substring(1);
+		
+		//ch를 대문자로 바꾼다.
+		char ch1 = (char) (ch - ('a' - 'A'));
+		str = ch1 + namuji;
+		
+		System.out.println(str);
 	}
 
 }

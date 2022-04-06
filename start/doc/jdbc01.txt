@@ -41,4 +41,64 @@
 		왜 인터페이스로 만들었나?
 			세션을 관리하는 방법이 각 DBMS마다 다르기 때문에 
 			접속하는 순간 함수의 기능을 거기에 맞도록 조절하기 위해서
+			
+------------------
+
+JDBC 프로그램 작성 순서
+
+	0. JDBC 드라이버 준비
+	1. 드라이버 로딩
+		
+		Class.forName(클래스경로);
+	
+	2. 데이터베이스에 접속
+		
+		Connection con = DriverManager.getConnection(String url, String id, String pw);
+		
+	
+	DBMS마다 작업 조금씩 다름..	
+	------------------------------
+	
+	3. JDBC와 실제 DBMS 사이에 명령을 전달할 수 있는 도구를 만들어야 한다.
+		(오라클은 서버 데이터베이스, 프로그램이 동작하는 컴퓨터와 데이터베이스가 있는 컴퓨터가 다를 수 있다.)
+	
+		사용하는 클래스(인터페이스) : Statement
+		
+		만드는 방법 : 인터페이스라서 new 불가능
+			
+			Statement stmt = con.createStatement();
+		
+		[참고]
+			질의명령 실행하는 방법
+			(Statement에 질의명령을 실어서 JDBC에게 보내는 방법)
+				
+				1. execute(String sql)
+					=> 질의명령을 실행한 후 JDBC에게 보고하지 않는다.
+						반환값은 boolean 타입인데 이것은 질의명령의 실행 여부가 아니고
+						데이터베이스가 JDBC에게 명령을 받았는지 여부 알려주는 것 
+						
+						결과값을 기억할 ResultSet을 만들어주지 않기 때문에 SELECT 질의명령에선 사용하지 않음	
+						주로 실행 여부와 관계 없는 명령 보낼 때 사용(CREATE, INSERT, ... )
+				
+				
+			**	2. executeQuery(String sql)
+					=> 반환값이 ResultSet 타입,	
+						질의명령 실행 결과 탄생하는 인라인 테이블(가상의 테이블, 메모리 상의 테이블) 관리하는 클래스
+						
+						100% 질의명령에 사용
+				
+				3. executeUpdate(String sql)
+					=> 반환값이 int 타입,
+						질의명령의 실행 결과 수정된 데이터의 갯수를 반환
+						주로 질의명령의 실행 결과 여부를 판단해야 할 때 사용하는 함수.
+												
+						[예]
+						UPDATE 질의명령 실행 결과 몇 개의 행이 수정되었는지
+						DELETE 질의명령 실행 결과 몇 개의 행이 삭제되었는지
+						
+						INSERT -> 반환값 1
+						5개 행 DELETE -> 반환값 5
+						
+						UPDATE, DELETE, INSERT( 1 or 0), ...		
+		
 			 	   		 

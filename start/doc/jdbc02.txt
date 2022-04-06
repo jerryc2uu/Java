@@ -128,4 +128,39 @@ SELECT 질의 결과 사용하기
 				Statement는 속도는 느리지만 매번 다른 질의명령을 처리할 수 있다.
 				PreparedStatement는 속도는 빠르지만 항상 동일한 질의명령만 처리할 수 있다.	
 				
-						
+					
+	1. dno라는 문자열을 입력받으면 부서번호를 입력받아서 
+ 	해당 부서의 부서원들의 사원번호, 사원이름, 직급, 입사일, 급여, 부서번호, 부서이름, 부서위치 출력해주고
+ 	
+ 	
+ 	SELECT
+ 		empno, ename, job, hiredate, sal, e.deptno, dname, loc
+ 		
+ 	FROM
+ 		emp e, dept d
+ 	WHERE
+ 		e.deptno = d.deptno
+ 		AND e.deptno = ?
+ 		
+ 				
+ 	2. job이라는 문자열을 입력받으면 해당 직급을 가진 사원들의
+ 		사원번호, 사원이름, 직급, 입사일, 급여, 급여등급, 커미션 조회
+  	
+  	SELECT
+ 		empno, ename, job, hiredate, sal, grade, NVL(TO_CHAR(comm), '커미션없음') comm	=> NVL 함수 내에서는 두 데이터 타입이 같아야함
+ 	FROM
+ 		emp, salgrade 
+ 	WHERE
+ 		sal BETWEEN losal AND hisal
+ 		AND job = ?
+ 	
+ 	
+ 	0. all 입력받으면 
+ 		모든 사원들의 사원번호, 사원이름, 직급, 입사일 조회하는 프로그램 작성 
+ 	
+ 	
+ 	
+ 	SELECT
+ 		empno, ename, job, hiredate 
+ 	FROM
+ 		emp	

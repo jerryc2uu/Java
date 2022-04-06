@@ -41,18 +41,33 @@ package day06.solv;
    7 8 9 10
    11 12 13 14 15
    
+   0	  ==> 0	
+   1 2    ==> i = 1
+   3 4 5  ==> 0 + 1 + 2	
+   6 7 8 9 
+   
+   
  */
 public class Ex03 {
-
-	public static void main(String[] args) {
+	
+	public Ex03() {
 		
-		/*for (int i = 1 ; i < 6; i++) {
-			System.out.println(i + " " + i + " " + i + " " + i + " " + i);
+		System.out.println("1번");
+		
+		System.out.println("6번=============================");
+		
+		int no = 1;
+		for(int i = 0 ; i < 5 ; i++) {
+			for(int j = 0 ; j <= i ; j++) {
+				System.out.print(no++ + " ");
+			}
+			System.out.println();
 		}
-		*/
 		
-		
-
+	}
+	
+	public static void main(String[] args) {
+		new Ex03(); // 생성자 함수 호출
 	}
 
 }

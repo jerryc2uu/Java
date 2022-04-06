@@ -76,7 +76,7 @@ public class PstmtTest01 {
 			
 			//질의명령이 완성이 됐으므로 JDBC에게 전달하고 결과를 받으면 된다.
 			//ResultSet : 인라인 뷰 기억하는 클래스
-			rs = pstmt.executeQuery();
+			rs = pstmt.executeQuery();//이미 질의명령이 pstmt에 포함되어 있기 때문에 sql 안 넣어줌
 			//몇 사람이 조회될 지 알 수 없으므로
 			while(rs.next()) {
 				//rs.next() : 작업 실행 줄을 한 줄 내려주는 함수. 이 때 꺼내올 데이터가 있으면 true 반환, 없으면(eof 이동) false 반환

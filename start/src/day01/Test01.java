@@ -1,14 +1,19 @@
 package day01;
 
 public class Test01 {
-	public static void main(String[] args) {
-		System.out.println("내가 만든 첫번째 자바 클래스!!!");
+
+		public static void main(String args[]) {
 		
-		Test01 t1 = new Test01();
-		t1.abc(); // Test01 클래스에 있는 abc() 실행하세요.
+		int a = 5;
+		int b = 1;
+		do {
+		 System.out.println( a+ "*" + b + " = "+ a*b);
+		 b++;
+		} while(b<=9);	
 		
-		
-	}
+
+		}
+	
 	
 	public void abc() {}
 	// 

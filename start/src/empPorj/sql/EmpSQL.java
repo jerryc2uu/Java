@@ -5,6 +5,7 @@ package empPorj.sql;
  	요구하면 해당 질의명령을 내보내주는 기능을 가진 클래스
  */
 public class EmpSQL {
+	public static final int SEL_DEPTLIST = 0;
 	// 코드변수
 	public final int SEL_ALL = 1001;
 	public final int SEL_DNOINFO = 1002;

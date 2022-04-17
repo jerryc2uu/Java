@@ -1,6 +1,7 @@
 package empProj.vo;
 
 import java.sql.Time;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -9,6 +10,7 @@ public class EmpVO {
 	private String ename, job, sname, dname, loc, sdate, scomm;
 	private Date hdate;
 	private Time htime;
+	
 	public int getEno() {
 		return eno;
 	}

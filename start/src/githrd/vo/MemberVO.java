@@ -8,10 +8,9 @@ import java.util.Date;
 public class MemberVO {
 
 	private int mno, ano;
-	private String name, id, pw, mail, tel, sdate;
-	private char gen;
-	private Date hdate;
-	private Time htime;
+	private String name, id, pw, mail, tel, sdate, gen, isshow;
+	private Date jdate;
+	private Time jtime;
 	
 	public int getMno() {
 		return mno;
@@ -64,32 +63,44 @@ public class MemberVO {
 	public void setSdate() {
 		SimpleDateFormat form1 = new SimpleDateFormat("yyyy년 MM월 dd일 ");
 		SimpleDateFormat form2 = new SimpleDateFormat("HH:mm:ss");
-		sdate = form1.format(hdate) + form2.format(htime);
+		sdate = form1.format(jdate) + form2.format(jtime);
 	}
-	public char getGen() {
+	public String getGen() {
 		return gen;
 	}
-	public void setGen(char gen) {
-		this.gen = gen;
+	public void setGen(String string) {
+		this.gen = string;
 	}
-	public Date getHdate() {
-		return hdate;
+	public Date getjdate() {
+		return jdate;
 	}
-	public void setHdate(Date hdate) {
-		this.hdate = hdate;
+	public void setJdate(Date jdate) {
+		this.jdate = jdate;
 	}
-	public Time getHtime() {
-		return htime;
+	public Time getJtime() {
+		return jtime;
 	}
-	public void setHtime(Time htime) {
-		this.htime = htime;
+	public void setJtime(Time jtime) {
+		this.jtime = jtime;
+	}
+	
+	public Date getJdate() {
+		return jdate;
+	}
+	
+	public String getIsshow() {
+		return isshow;
+	}
+	public void setIsshow(String isshow) {
+		this.isshow = isshow;
 	}
 	
 	@Override
 	public String toString() {
 		return "MemberVO [mno=" + mno + ", ano=" + ano + ", name=" + name + ", id=" + id + ", pw=" + pw + ", mail="
-				+ mail + ", tel=" + tel + ", sdate=" + sdate + ", gen=" + gen + ", hdate=" + hdate + ", htime=" + htime
-				+ "]";
+				+ mail + ", tel=" + tel + ", sdate=" + sdate + ", gen=" + gen + ", isshow=" + isshow + ", jdate="
+				+ jdate + ", jtime=" + jtime + "]";
 	}
+	
 	
 }

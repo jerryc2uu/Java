@@ -29,8 +29,8 @@ public class Ex02 {
 		//할 일
 		
 		//입력도구 준비
-		Scanner sc = new Scanner(System.in);//키보드에서 입력된 문자가 프로그램으로 오는 통로
-		//scanner는 도구들을 모아둔 곳, 메모리에 올릴 때 필요한 회선??
+		Scanner sc = new Scanner(System.in);//System.in : 키보드에서 입력된 문자가 프로그램으로 오는 통로
+		//scanner는 입력 받은 데이터를 꺼낼 때 필요한 도구들을 모아둔 클래스, 메모리에 올릴 때 필요한 회선??
 		
 		//입력받기 전에 메시지 출력
 		System.out.print("반지름 : ");

@@ -36,7 +36,11 @@ public class Ex01{
 	     
 	  //2. 판별해서 변수에 담는다. 
 	  
-	  int max = (no1 > no2) ? ((no1 > no3) ? (no1) : (no3)) : ((no2 > no3) ? (no2) : (no3));
+	  int max = (no1 > no2) ? ( // no1 > no2인 경우
+			  		(no1 > no3) ? (no1) : (no3) //no1이 가장 큰 수 , no3이 가장 큰 수
+			  	) : ( // no2 > no1인 경우
+			  		(no2 > no3) ? (no2) : (no3) //no2가 가장 큰 수, no3이 가장 큰 수
+			  	);
 	  
 	  //3. 출력한다.
 	  

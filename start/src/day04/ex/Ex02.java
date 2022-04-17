@@ -45,8 +45,11 @@ public class Ex02 {
 		// 입력 받아서 문자열 저장하고
 		String str = sc.nextLine();
 		
+		//자원반환
+		sc.close();
+		
 		// 문자열에서 문자 추출하고
-		char ch = str.charAt(0);
+		char ch = str.charAt(0);//문자열 str에서 첫번째 문자 ch 꺼낸다...
 		
 		// 판별하고 (판별 결과는 변수에 담아서 처리하자)
 		char result = (ch < 'A') ? (ch) : (
@@ -59,7 +62,9 @@ public class Ex02 {
 				
 				
 		/*
-		    A - Z - 특수문자 - a - z - 특수문자
+		 	[아스키코드값 순서]
+		 	
+		    특수문자 - A - Z - 특수문자 - a - z - 특수문자
 		 */
 		
 		// 출력

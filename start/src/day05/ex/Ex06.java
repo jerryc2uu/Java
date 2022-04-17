@@ -19,6 +19,7 @@ public class Ex06 {
 
 	public static void main(String[] args) {
 		
+		int no = Math.random(100 - 1 * )
 
 	}
 

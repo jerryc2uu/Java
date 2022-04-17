@@ -32,7 +32,7 @@ public class Test04 {
 		// 결과 변수 만들고
 		String sage = "장년층";
 		
-		if (age < 10) {
+		if (age < 10) {//가장 좁은 범위부터 시작한다...
 			sage = "유년기";
 		} else if(age < 20) { //age >= 10 & age < 20 라는 의미
 			sage = "10대";

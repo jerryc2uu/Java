@@ -12,7 +12,8 @@ public class Test06 {
 		for(int i = 0 ; i < 10 ; i++ ) {
 			System.out.println((i+1) + " ] 번째 : " + str);
 		}
-
+		
+		System.out.println("출력 끝...!");
 	}
 
 }

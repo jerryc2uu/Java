@@ -4,9 +4,9 @@ package day05;
    1부터 6까지를 기억하는 배열의 데이터를 
    하나씩 꺼내서 출력하세요.
    
-   참고 ]
+   [참고]
       배열 : 타입이 같은 데이터를 일정 갯수 만큼 모아서 하나로 관리하도록 만들어 놓은
-             자바의 데이터 타입
+             자바의 데이터 타입 중 하나(int와 int[]는 별개)
              
              타입이 결정이 되어야 하고 
              갯수도 결정이 되어야 만들 수 있다.
@@ -14,12 +14,14 @@ package day05;
            단점
               한 번 사이즈(갯수)가 결정이 되면 수정 불가.
            
-           만드는 형식  ]
-               데이터 타입 [] 변수이름 = new 데이터타입[데이터 갯수];
+           [형식]
+           
+               데이터 타입 [] 변수이름 = new 데이터타입[데이터갯수];
                
                데이터 타입 [] 변수이름 = {데이터1, 데이터2, 데이터3 ....};
                
-           배열 데이터 사용하는 방법
+           [사용법]
+           
               데이터타입   변수이름 = 배열변수[위치값];
               이때 위치값은 0부터 시작한다.
               0이 첫번째 데이터의 위치값이다.
@@ -28,19 +30,21 @@ package day05;
  */
 public class Test08 {
 
-	public static void main(String[] args) {
-		int [] num = {1, 2, 3, 4, 5, 6}; // 1부터 6까지 관리하는 정수배열
-		
+	public static void main(String[] args) {// 문자열 관리하는 배열 args
+		int[] num = {1, 2, 3, 4, 5, 6}; // 1부터 6까지 관리하는 정수배열
+	
 		// 배열 갯수 알아내고 
-		int len = num.length;
+		int len = num.length;//length : 변수, 배열을 만들면 이 변수에 사이즈가 기억된다.
 		
 		for (int i = 0 ; i < len ; i++ ) {
-			System.out.println((i+1) + " 번째 데이터 : " + num[i]);
+			System.out.println((i + 1) + " 번째 데이터 : " + num[i]);
 		}
+		
+		int[] number = {7, 8, 9, 10, 11, 12};
 		
 		
 		//향상된 for 명령 처리
-		for(int no : num) {
+		for(int no : number) {// int no : 이 블럭 안에서만 사용 가능한 변수
 			System.out.println("### " + no);
 		}
 	}

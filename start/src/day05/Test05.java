@@ -28,7 +28,7 @@ public class Test05 {
 		
 		int gen = age / 10 * 10;
 		
-		switch(gen) {
+		switch(gen) {//본래 break;(현재 실행 중인 명령 즉시 종료)는 반복문에만 쓰지만 예외적으로 switch문에도 쓰인다. 
 		case 0:
 			sage = "유년기";
 			break;

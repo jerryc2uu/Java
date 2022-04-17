@@ -50,8 +50,8 @@ public class Ex05 {
 		int result = 0;
 		
 		
-		hap = (num > 50) ? (100 - num) : (num);
-		//result = (num > 50) ? no + hap : ho - hap;
+		hap = (num > 50) ? (100 - num) : (num); //num이 76일 때, 100 - 76을 더해준다.
+		//result = (num > 50) ? no + hap : no - hap;
 		
 		result = num > 50 ? (no / 100 + 1) * 100 : (no / 100) * 100 ;
 		

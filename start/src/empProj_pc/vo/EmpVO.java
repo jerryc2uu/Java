@@ -1,22 +1,19 @@
 package empProj_pc.vo;
 
-import java.sql.Time;
-
+import java.sql.*;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class EmpVO {
-
-	private int empno, mgr, sal, deptno, grade, comm;
+	
+	private int eno, mgr, dno, sal, grade, comm;
 	private String ename, job, sname, dname, loc, sdate, scomm;
 	private Date hdate;
 	private Time htime;
-	
-	public int getEmpno() {
-		return empno;
+	public int getEno() {
+		return eno;
 	}
-	public void setEmpno(int empno) {
-		this.empno = empno;
+	public void setEno(int eno) {
+		this.eno = eno;
 	}
 	public int getMgr() {
 		return mgr;
@@ -24,17 +21,17 @@ public class EmpVO {
 	public void setMgr(int mgr) {
 		this.mgr = mgr;
 	}
+	public int getDno() {
+		return dno;
+	}
+	public void setDno(int dno) {
+		this.dno = dno;
+	}
 	public int getSal() {
 		return sal;
 	}
 	public void setSal(int sal) {
 		this.sal = sal;
-	}
-	public int getDeptno() {
-		return deptno;
-	}
-	public void setDeptno(int deptno) {
-		this.deptno = deptno;
 	}
 	public int getGrade() {
 		return grade;
@@ -82,8 +79,8 @@ public class EmpVO {
 		return sdate;
 	}
 	public void setSdate() {
-		SimpleDateFormat form1 = new SimpleDateFormat("yyyy년 MM월 dd일 ");
-		SimpleDateFormat form2 = new SimpleDateFormat("HH:mm:ss ");
+		SimpleDateFormat form1 = new SimpleDateFormat("yyyy년 MM월 dd일");
+		SimpleDateFormat form2 = new SimpleDateFormat("HH:mm:ss");
 		sdate = form1.format(hdate) + form2.format(htime);
 	}
 	public void setSdate(String sdate) {
@@ -107,15 +104,11 @@ public class EmpVO {
 	public void setHtime(Time htime) {
 		this.htime = htime;
 	}
-	
 	@Override
 	public String toString() {
-		return "EmpVO [empno=" + empno + ", mgr=" + mgr + ", sal=" + sal + ", deptno=" + deptno + ", grade=" + grade
-				+ ", comm=" + comm + ", ename=" + ename + ", job=" + job + ", sname=" + sname + ", dname=" + dname
-				+ ", loc=" + loc + ", sdate=" + sdate + ", scomm=" + scomm + ", hdate=" + hdate + ", htime=" + htime
-				+ "]";
+		return "EmpVO [eno=" + eno + ", mgr=" + mgr + ", dno=" + dno + ", sal=" + sal + ", grade=" + grade + ", comm="
+				+ comm + ", ename=" + ename + ", job=" + job + ", sname=" + sname + ", dname=" + dname + ", loc=" + loc
+				+ ", sdate=" + sdate + ", scomm=" + scomm + ", hdate=" + hdate + ", htime=" + htime + "]";
 	}
-	
-	
 	
 }

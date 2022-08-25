@@ -1,18 +1,14 @@
-package githrd.vo;
+package memProj.vo;
 
 import java.sql.Time;
-
-
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.*;
 
 public class MemberVO {
-
 	private int mno, ano;
-	private String name, id, pw, mail, tel, sdate, isshow, gen;
+	private String name, id, pw, mail, tel, gen, sdate;
 	private Date jdate;
 	private Time jtime;
-	
 	public int getMno() {
 		return mno;
 	}
@@ -55,6 +51,12 @@ public class MemberVO {
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
+	public String getGen() {
+		return gen;
+	}
+	public void setGen(String gen) {
+		this.gen = gen;
+	}
 	public String getSdate() {
 		return sdate;
 	}
@@ -63,17 +65,10 @@ public class MemberVO {
 	}
 	public void setSdate() {
 		SimpleDateFormat form1 = new SimpleDateFormat("yyyy년 MM월 dd일 ");
-		SimpleDateFormat form2 = new SimpleDateFormat("HH:mm:ss");
+		SimpleDateFormat form2 = new SimpleDateFormat("HH:mm:ss ");
 		sdate = form1.format(jdate) + form2.format(jtime);
 	}
-
-	public String getGen() {
-		return gen;
-	}
-	public void setGen(String gen) {
-		this.gen = gen;
-	}
-	public Date getjdate() {
+	public Date getJdate() {
 		return jdate;
 	}
 	public void setJdate(Date jdate) {
@@ -85,24 +80,11 @@ public class MemberVO {
 	public void setJtime(Time jtime) {
 		this.jtime = jtime;
 	}
-	
-	public Date getJdate() {
-		return jdate;
-	}
-	
-	public String getIsshow() {
-		return isshow;
-	}
-	public void setIsshow(String isshow) {
-		this.isshow = isshow;
-	}
-	
 	@Override
 	public String toString() {
 		return "MemberVO [mno=" + mno + ", ano=" + ano + ", name=" + name + ", id=" + id + ", pw=" + pw + ", mail="
-				+ mail + ", tel=" + tel + ", sdate=" + sdate + ", isshow=" + isshow + ", gen=" + gen + ", jdate="
-				+ jdate + ", jtime=" + jtime + "]";
+				+ mail + ", tel=" + tel + ", gen=" + gen + ", sdate=" + sdate + ", jdate=" + jdate + ", jtime=" + jtime
+				+ "]";
 	}
-	
 	
 }

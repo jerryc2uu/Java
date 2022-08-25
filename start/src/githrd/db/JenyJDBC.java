@@ -1,6 +1,7 @@
 package githrd.db;
 /*
  	이 클래스는 JENNIE 계정으로 데이터베이스 작업할 경우
+
  	필요한 드라이버 로딩, 커넥션, statement 반환
  * @author 박소연
  * @since 2022.04.15
@@ -77,9 +78,9 @@ public class JenyJDBC {
 				 */
 			} else if(o instanceof Statement) {
 				((Statement) o).close();
-			} else if(o instanceof Statement) {
+			} else if(o instanceof PreparedStatement) {
 				((PreparedStatement) o).close();
-			} else if(o instanceof Statement) {
+			} else if(o instanceof ResultSet) {
 				((ResultSet) o).close();
 			}
 		} catch(Exception e) {}

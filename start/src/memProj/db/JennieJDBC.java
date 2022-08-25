@@ -1,11 +1,10 @@
-package empProj_pc.db;
+package memProj.db;
 
 import java.sql.*;
 
-public class ScottJDBC {
-
-	public ScottJDBC() {
-		// 이 클래스를 new 시키는 순간 드라이버 자동 로딩
+public class JennieJDBC {
+	
+	public JennieJDBC() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 		} catch(Exception e) {
@@ -13,38 +12,30 @@ public class ScottJDBC {
 		}
 	}
 	
-	//커넥션 준비
-	public Connection getCON() {
+	//커넥션 반환 함수
+	public Connection getCon() {
 		Connection con = null;
-		
-		//정보 준비
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-		String user = "scott";
-		String pw = "tiger";
-		
-		//커넥션 연결
+		String user = "jennie";
+		String pw = "12345";
 		try {
 			con = DriverManager.getConnection(url, user, pw);
 		} catch(Exception e) {}
-		
 		return con;
 	}
 	
-	
-	//stmt 준비
-	public Statement getSTMT(Connection con) {
-		
+	//stmt 반환 함수
+	public Statement getStmt(Connection con) {
 		Statement stmt = null;
 		
 		try {
-			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);		
 		} catch(Exception e) {}
-		
 		return stmt;
 	}
 	
-	//pstmt
-	public PreparedStatement getPSTMT(Connection con, String sql) {
+	//pstmt 반환 함수
+	public PreparedStatement getPstmt(Connection con, String sql) {
 		PreparedStatement pstmt = null;
 		
 		try {
@@ -53,8 +44,8 @@ public class ScottJDBC {
 		
 		return pstmt;
 	}
+	//자원 닫는 함수
 	
-	//사용하지 않는 자원 반환
 	public void close(Object o) {
 		try {
 			if(o instanceof Connection) {
@@ -68,4 +59,5 @@ public class ScottJDBC {
 			}
 		} catch(Exception e) {}
 	}
+	
 }

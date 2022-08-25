@@ -60,6 +60,54 @@ public class MemberDao {
 		return list;
 		
 	}
+	// 모든 회원 번호 조회
+	public ArrayList<Integer> getMnoList() {
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		
+		con = db.getCon();
+		String sql = mSQL.getSQL(mSQL.SEL_ALLMNO);
+		stmt = db.getStmt(con);
+		
+		try {
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				list.add(rs.getInt("mno"));
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.close(rs);
+			db.close(stmt);
+			db.close(con);
+		}
+		return list;
+	}
+	
+	//모든 회원 아이디 조회
+	public ArrayList<String> getIdList() {
+		ArrayList<String> list = new ArrayList<String>();
+		
+		con = db.getCon();
+		String sql = mSQL.getSQL(mSQL.SEL_ALLID);
+		stmt = db.getStmt(con);
+		
+		try {
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				list.add(rs.getString("id"));
+			}
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.close(rs);
+			db.close(stmt);
+			db.close(con);
+		}
+		return list;
+	}
 	
 	//2. 회원번호 입력하면 해당 회원의 정보 조회해주는 함수
 	public MemberVO getMinfo(int mno) {
@@ -140,7 +188,7 @@ public class MemberDao {
 			String mail = mVO.getMail();
 			String tel = mVO.getTel();
 			int ano = mVO.getAno();
-			//String gen = mVO.getGen();
+			String gen = mVO.getGen();
 			
 			pstmt.setString(1, name);
 			pstmt.setString(2, id);
@@ -148,7 +196,7 @@ public class MemberDao {
 			pstmt.setString(4, mail);
 			pstmt.setString(5, tel);
 			pstmt.setInt(6, ano);
-			//pstmt.setString(7, gen);
+			pstmt.setString(7, gen);
 			
 			cnt = pstmt.executeUpdate();
 			
@@ -161,5 +209,43 @@ public class MemberDao {
 		
 		return cnt;
 		
+	}
+	
+	//5. 신규 회원 정보 조회하는 함수
+	public MemberVO getNew() {
+		//반환값 변수
+		MemberVO mVO = new MemberVO();
+		
+		//커넥션
+		con = db.getCon();
+		//질의명령
+		String sql = mSQL.getSQL(mSQL.SEL_NEWMEM);
+		//명령 전달도구
+		stmt = db.getStmt(con);
+		//질의명령 보내고 결과 받고
+		try {
+			rs = stmt.executeQuery(sql);
+			rs.next();
+			mVO.setMno(rs.getInt("mno"));
+			mVO.setName(rs.getString("name"));
+			mVO.setId(rs.getString("id"));
+			mVO.setPw(rs.getString("pw"));
+			mVO.setMail(rs.getString("mail"));
+			mVO.setTel(rs.getString("tel"));
+			mVO.setAno(rs.getInt("avt"));
+			mVO.setGen(rs.getString("gen"));
+			mVO.setJdate(rs.getDate("joindate"));
+			mVO.setJtime(rs.getTime("joindate"));
+			mVO.setSdate();
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.close(rs);
+			db.close(stmt);
+			db.close(con);
+		}
+		
+		return mVO;
 	}
 }

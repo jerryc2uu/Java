@@ -50,7 +50,7 @@ public class EmpView {
 			String sno = sc.nextLine();
 			System.out.println();
 			try {
-				dno = Integer.parseInt(sno);// 문자열 => 정수 변환
+				dno =Integer.parseInt(sno);// 문자열 => 정수 변환
 				
 				if(dno != -1 && !dnoList.contains(dno)) {
 					System.out.println("# 없는 부서입니다. 다시입력하세요!\n");
